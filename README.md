@@ -6,7 +6,7 @@
 
 ## Infra architecture
 
-<Logical components, ports/protocols, cloud type.>
+[./schema.drawio.png](./schema.dravio.png)
 
 ## Scenario
 
