@@ -6,7 +6,7 @@
 
 ## Infra architecture
 
-[./schema.drawio.png](./schema.dravio.png)
+![Schema](/schema.drawio.png)
 
 ## Scenario
 
