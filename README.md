@@ -2,7 +2,9 @@
 
 ## POC objectives
 
-We will host a Node.JS chat application on RedHat OpenShift server and modify it to implement an authentication flow with a Keycloak Pod.
+On the RedHat OpenShift Container Platform we will host a sample NodeJS appliation.
+The NodeJS applicaiton uses a PostgreSQL database in the backend. 
+Additionnaly we will implement a SSO authentication for the application with Keycloak.
 
 ## Infra architecture
 
