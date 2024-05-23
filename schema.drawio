@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2024-05-21T16:16:59.061Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0" etag="vo0dIYizRmFFvMcqJ1OO" version="24.4.4" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-23T12:49:46.475Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="NVCQ-eUJLgm9iW3CaVUh" version="24.4.6" type="github">
   <diagram name="Page-1" id="197159a0-c6a4-9194-75a8-e4174976684c">
-    <mxGraphModel dx="1848" dy="1048" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+    <mxGraphModel dx="984" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" style=";html=1;" />
         <mxCell id="1" style=";html=1;" parent="0" />
         <mxCell id="bUOJ_VPWDClfyEDVL0uz-1" value="&lt;div&gt;RedHat OpenShift Container Platform&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fillColor=none;strokeColor=#b85450;" parent="1" vertex="1">
-          <mxGeometry x="800" y="520" width="580" height="370" as="geometry" />
+          <mxGeometry x="800" y="520" width="580" height="690" as="geometry" />
         </mxCell>
         <mxCell id="bUOJ_VPWDClfyEDVL0uz-2" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/containers/Azure_Red_Hat_OpenShift.svg;" parent="1" vertex="1">
           <mxGeometry x="1300" y="530" width="68" height="68" as="geometry" />
@@ -14,16 +14,13 @@
           <mxGeometry x="1053.54" y="560" width="72.92" height="70" as="geometry" />
         </mxCell>
         <mxCell id="bUOJ_VPWDClfyEDVL0uz-5" value="mongoDB-pod" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=pod" parent="1" vertex="1">
-          <mxGeometry x="1269.58" y="741.25" width="71.61" height="68.75" as="geometry" />
+          <mxGeometry x="1190" y="950.0000000000001" width="71.61" height="68.75" as="geometry" />
         </mxCell>
         <mxCell id="bUOJ_VPWDClfyEDVL0uz-12" value="&lt;div&gt;app-svc&lt;/div&gt;" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=svc" parent="1" vertex="1">
           <mxGeometry x="900" y="753.2" width="50" height="48" as="geometry" />
         </mxCell>
-        <mxCell id="bUOJ_VPWDClfyEDVL0uz-13" value="mongoDB-svc" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=svc" parent="1" vertex="1">
-          <mxGeometry x="1160" y="754.2" width="50" height="48" as="geometry" />
-        </mxCell>
-        <mxCell id="bUOJ_VPWDClfyEDVL0uz-6" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.mongodb" parent="1" vertex="1">
-          <mxGeometry x="1309.58" y="690.0000000000001" width="41.2" height="86.2" as="geometry" />
+        <mxCell id="bUOJ_VPWDClfyEDVL0uz-13" value="Postgresql&lt;span style=&quot;background-color: initial;&quot;&gt;DB-svc&lt;/span&gt;" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=svc" parent="1" vertex="1">
+          <mxGeometry x="1200.8" y="1112" width="50" height="48" as="geometry" />
         </mxCell>
         <mxCell id="bUOJ_VPWDClfyEDVL0uz-15" value="OpenShift Route&lt;br&gt;app" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/containers/Azure_Red_Hat_OpenShift.svg;" parent="1" vertex="1">
           <mxGeometry x="770" y="750" width="50" height="50" as="geometry" />
@@ -50,7 +47,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="bUOJ_VPWDClfyEDVL0uz-27" value="" style="endArrow=none;html=1;rounded=0;exitX=0.005;exitY=0.63;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.995;entryY=0.63;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="bUOJ_VPWDClfyEDVL0uz-13" target="bUOJ_VPWDClfyEDVL0uz-4" edge="1">
+        <mxCell id="bUOJ_VPWDClfyEDVL0uz-27" value="" style="endArrow=none;html=1;rounded=0;exitX=0.005;exitY=0.63;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="bUOJ_VPWDClfyEDVL0uz-13" target="J31OWuKhVoPTrz1gxMmf-9" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1151" y="779.2" as="sourcePoint" />
             <mxPoint x="1073" y="781.2" as="targetPoint" />
@@ -67,7 +64,7 @@
             <mxPoint x="920" y="852" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="bUOJ_VPWDClfyEDVL0uz-31" value="" style="endArrow=none;html=1;rounded=0;exitX=0.005;exitY=0.63;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.995;entryY=0.63;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="bUOJ_VPWDClfyEDVL0uz-5" target="bUOJ_VPWDClfyEDVL0uz-13" edge="1">
+        <mxCell id="bUOJ_VPWDClfyEDVL0uz-31" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="bUOJ_VPWDClfyEDVL0uz-5" target="bUOJ_VPWDClfyEDVL0uz-13" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1250" y="732" as="sourcePoint" />
             <mxPoint x="1162" y="730" as="targetPoint" />
@@ -84,39 +81,71 @@
         <mxCell id="bUOJ_VPWDClfyEDVL0uz-4" value="&lt;div&gt;app-pod(s)&lt;/div&gt;" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=pod" parent="1" vertex="1">
           <mxGeometry x="1010" y="740" width="72.91" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="bUOJ_VPWDClfyEDVL0uz-10" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.java" parent="1" vertex="1">
-          <mxGeometry x="1060" y="710" width="34.4" height="65" as="geometry" />
-        </mxCell>
-        <mxCell id="qOma7RcPHYg1zwben9A7-1" value="OpenShift Route&lt;br&gt;&lt;div&gt;keycloak&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/containers/Azure_Red_Hat_OpenShift.svg;" vertex="1" parent="1">
+        <mxCell id="qOma7RcPHYg1zwben9A7-1" value="OpenShift Route&lt;br&gt;&lt;div&gt;keycloak&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/containers/Azure_Red_Hat_OpenShift.svg;" parent="1" vertex="1">
           <mxGeometry x="770" y="590" width="50" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="qOma7RcPHYg1zwben9A7-3" value="https&lt;br&gt;443" style="endArrow=none;html=1;rounded=0;exitX=-0.02;exitY=0.68;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qOma7RcPHYg1zwben9A7-1" target="bUOJ_VPWDClfyEDVL0uz-17">
+        <mxCell id="qOma7RcPHYg1zwben9A7-3" value="https&lt;br&gt;443" style="endArrow=none;html=1;rounded=0;exitX=-0.02;exitY=0.68;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="qOma7RcPHYg1zwben9A7-1" target="bUOJ_VPWDClfyEDVL0uz-17" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="778" y="784" as="sourcePoint" />
             <mxPoint x="490" y="852" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="qOma7RcPHYg1zwben9A7-4" value="keycloak-svc" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=svc" vertex="1" parent="1">
+        <mxCell id="qOma7RcPHYg1zwben9A7-4" value="keycloak-svc" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=svc" parent="1" vertex="1">
           <mxGeometry x="920" y="582" width="50" height="48" as="geometry" />
         </mxCell>
-        <mxCell id="qOma7RcPHYg1zwben9A7-5" value="http&lt;br&gt;8080" style="endArrow=none;html=1;rounded=0;exitX=0.005;exitY=0.63;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.995;entryY=0.63;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bUOJ_VPWDClfyEDVL0uz-3" target="qOma7RcPHYg1zwben9A7-4">
+        <mxCell id="qOma7RcPHYg1zwben9A7-5" value="http&lt;br&gt;8080" style="endArrow=none;html=1;rounded=0;exitX=0.005;exitY=0.63;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.995;entryY=0.63;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="bUOJ_VPWDClfyEDVL0uz-3" target="qOma7RcPHYg1zwben9A7-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1040" y="606.5" as="sourcePoint" />
             <mxPoint x="980" y="605.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="qOma7RcPHYg1zwben9A7-6" value="http&lt;br&gt;8080" style="endArrow=none;html=1;rounded=0;exitX=0.005;exitY=0.63;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.1;entryY=0.56;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qOma7RcPHYg1zwben9A7-4" target="qOma7RcPHYg1zwben9A7-1">
+        <mxCell id="qOma7RcPHYg1zwben9A7-6" value="http&lt;br&gt;8080" style="endArrow=none;html=1;rounded=0;exitX=0.005;exitY=0.63;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.1;entryY=0.56;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="qOma7RcPHYg1zwben9A7-4" target="qOma7RcPHYg1zwben9A7-1" edge="1">
           <mxGeometry x="-0.0032" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="910" y="793" as="sourcePoint" />
             <mxPoint x="832" y="794" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="qOma7RcPHYg1zwben9A7-7" value="https&lt;br&gt;443" style="endArrow=none;html=1;rounded=0;exitX=0.9;exitY=1.04;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.1;entryY=0.2;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qOma7RcPHYg1zwben9A7-1" target="bUOJ_VPWDClfyEDVL0uz-33">
+        <mxCell id="qOma7RcPHYg1zwben9A7-7" value="https&lt;br&gt;443" style="endArrow=none;html=1;rounded=0;exitX=0.9;exitY=1.04;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.1;entryY=0.2;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="qOma7RcPHYg1zwben9A7-1" target="bUOJ_VPWDClfyEDVL0uz-33" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="779" y="634" as="sourcePoint" />
             <mxPoint x="490" y="800" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="J31OWuKhVoPTrz1gxMmf-2" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="910" width="48" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="J31OWuKhVoPTrz1gxMmf-3" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/long-shadow-web-icons/512/nodejs-128.png" vertex="1" parent="1">
+          <mxGeometry x="1062.5" y="700" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="J31OWuKhVoPTrz1gxMmf-4" value="vault-svc&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=svc" vertex="1" parent="1">
+          <mxGeometry x="1021.45" y="930.8000000000001" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="J31OWuKhVoPTrz1gxMmf-5" value="https&lt;br&gt;443" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" source="J31OWuKhVoPTrz1gxMmf-4" target="bUOJ_VPWDClfyEDVL0uz-4">
+          <mxGeometry x="-0.083" y="-1" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1081.45" y="890.5" as="sourcePoint" />
+            <mxPoint x="1021.45" y="889.5" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J31OWuKhVoPTrz1gxMmf-6" value="vault&lt;span style=&quot;background-color: initial;&quot;&gt;-pod&lt;/span&gt;" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="1009.99" y="1090" width="72.92" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="J31OWuKhVoPTrz1gxMmf-7" value="http&amp;nbsp;&lt;div&gt;8200&lt;/div&gt;" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.0909" y="-1" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1045.95" y="1099.8" as="sourcePoint" />
+            <mxPoint x="1045.95" y="978.8" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J31OWuKhVoPTrz1gxMmf-9" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://www.drupal.org/files/project-images/Vault_VerticalLogo_FullColor_2_0.png;" vertex="1" parent="1">
+          <mxGeometry x="1053.54" y="1060" width="80.16" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J31OWuKhVoPTrz1gxMmf-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="bUOJ_VPWDClfyEDVL0uz-1" target="bUOJ_VPWDClfyEDVL0uz-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J31OWuKhVoPTrz1gxMmf-14" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://static-00.iconduck.com/assets.00/keycloak-icon-2048x2048-5ge904so.png;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="534" width="60" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
