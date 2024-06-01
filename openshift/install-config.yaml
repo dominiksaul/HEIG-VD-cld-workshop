@@ -1,0 +1,25 @@
+apiVersion: v1
+baseDomain: superchat.com
+compute:
+  - hyperthreading: Enabled
+    name: worker
+    replicas: 0
+controlPlane:
+  hyperthreading: Enabled
+  name: master
+  replicas: 3
+metadata:
+  name: superchat
+networking:
+  clusterNetwork:
+    - cidr: 10.128.0.0/14
+      hostPrefix: 23
+  networkType: OVNKubernetes
+  serviceNetwork:
+    - 172.30.0.0/16
+platform:
+  none: {}
+fips: false
+#The following are fakes, you should replace with your real credential
+pullSecret: '{"auths": ...}'
+sshKey: 'ssh-ed25519 AAAA...'
