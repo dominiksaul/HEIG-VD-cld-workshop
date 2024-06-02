@@ -15,7 +15,7 @@ Settings > Deploy keys > Add deploy key
 ## Create a Secret to authenticate on Github
 ```bash
 # Create a Secret Using with the Private Key:
-oc create secret generic github-deploy-key --from-file=ssh-privatekey=./sshkeys/github-deploy-key --type=kubernetes.io/ssh-auth
+oc create secret generic github-deploy-key --from-file=ssh-privatekey=./keys/githubDeploy --type=kubernetes.io/ssh-auth
 
 # Link the Secret to the Service Account
 oc secrets link builder github-deploy-key --for=pull
@@ -39,8 +39,6 @@ oc status
 
 # Expose the Service
 oc expose svc/chat-app
-
-
 
 
 # Commands to delete created resources in case of an error
