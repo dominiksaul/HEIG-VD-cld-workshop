@@ -18,16 +18,21 @@ spec:
         ports:
         - containerPort: 5432
         env:
-        - name: POSTGRESQL_USER
-          value: admin
-        - name: POSTGRESQL_PASSWORD
-          value: ov.vLek84#j@n28DeoC9Ri
+        - name: POSTGRES_DB
+          value: chat-db
         - name: POSTGRESQL_DATABASE
           value: chat-db
+        - name: POSTGRESQL_USER
+          value: admin
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres-db-secret
+              key: POSTGRES_PASSWORD
         volumeMounts:
         - mountPath: /var/lib/postgresql/data
           name: postgresql-data
       volumes:
       - name: postgresql-data
         persistentVolumeClaim:
-          claimName: postgresql-pvc
+          claimName: postgresql
