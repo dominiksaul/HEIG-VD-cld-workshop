@@ -15,7 +15,7 @@ Settings > Deploy keys > Add deploy key
 ## Create a Secret to authenticate on Github
 ```bash
 # Create a Secret Using with the Private Key:
-oc create secret generic github-deploy-key --from-file=ssh-privatekey=./keys/id_ed25519 --type=kubernetes.io/ssh-auth
+oc create secret generic github-deploy-key --from-file=ssh-privatekey=./sshkeys/github-deploy-key --type=kubernetes.io/ssh-auth
 
 # Link the Secret to the Service Account
 oc secrets link builder github-deploy-key --for=pull
