@@ -48,12 +48,66 @@ At the start, when user want to access the application
 Redirected to KeyCloak for authentication
 ```
 
+### STEP 02
+```
+// given -> starting context
+User is authenticated via Keycloak.
+// when -> event to produce
+User tries to access the application,
+// then -> expected result
+Access is granted to the chat application.
+```
+
+### STEP 03
+```
+// given -> starting context
+User is logged into the application and tries to use the chat feature.
+// when -> event to produce
+User sends a message in the chat,
+// then -> expected result
+Message is stored in the PostgreSQL database and displayed to other users.
+```
+
+### STEP 04
+```
+// given -> starting context
+User is authenticated via Keycloak.
+// when -> event to produce
+User tries to logout in the Application,
+// then -> expected result
+The user is logged out and has to reconnect itself again.
+```
+
+### STEP 05
+```
+// given -> starting context
+User account exists with a specific password.
+// when -> event to produce
+Infrastructure is restarted
+// then -> expected result
+The useraccount still exists with the same password
+```
+
+### STEP 06
+```
+// given -> starting context
+User has send a message to another user which is saved in the DB.
+// when -> event to produce
+Infrastructure is restarted
+// then -> expected result
+The message still exists in the DB and is correctly shown in the app
+```
+
 ## Cost
 
 <analysis of load-related costs.>
+* AWS Hosting: Costs associated with running the OpenShift cluster on AWS.
+* Persistent Storage: Costs for the storage volumes used by PostgreSQL and Keycloak.
+* Licencing Costs: NodeJS, PostgreSQL and KeyCloak are open source.
 
 <option to reduce or adapt costs (practices, subscription)>
-KeyCloak is opensource so there is only operational costs involved.
+* Use AWS free Tier
+* Use OpenShift locally or in the Sandbox (30 days trial) during developpement
   
 ## Return of experience
 
