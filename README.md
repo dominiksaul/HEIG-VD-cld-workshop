@@ -19,6 +19,8 @@ Users, that aren't authenticated, should be redirected to the Keycloak to authen
 Only if the users are authenticated they should be able to use the app.
 The NodeJS application can be scaled (manually) and the data (chats in PostgreSQL and accounts in Keycloak) are persistent even after restart.
 
+Repository of Chat Application: https://github.com/dominiksaul/HEIG-VD-cld-chatapp
+
 ## Infra architecture
 
 ![Schema](/schema.drawio.png)
