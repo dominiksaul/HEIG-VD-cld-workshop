@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: chat-app
-        image: image-registry.openshift-image-registry.svc:5000/<namespace>/nodejs-app:latest # todo check this path
+        image: default-route-openshift-image-registry.apps.sandbox-m2.ll9k.p1.openshiftapps.com/dominik-dev/chat-app
         ports:
         - containerPort: 8080
         env:

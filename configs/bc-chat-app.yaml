@@ -1,0 +1,37 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"build.openshift.io/v1","kind":"BuildConfig","metadata":{"annotations":{},"name":"chat-app","namespace":"dominik-dev"},"spec":{"output":{"to":{"kind":"ImageStreamTag","name":"chat-app:latest"}},"source":{"git":{"uri":"git@github.com:dominiksaul/HEIG-VD-cld-chatapp.git"},"sourceSecret":{"name":"github-deploy-key"},"type":"Git"},"strategy":{"sourceStrategy":{"from":{"kind":"ImageStreamTag","name":"chat-app:latest"}},"type":"Source"}}}
+  creationTimestamp: "2024-06-02T19:02:48Z"
+  generation: 2
+  name: chat-app
+  namespace: dominik-dev
+  resourceVersion: "4399536425"
+  uid: d81c846a-473c-40e5-9dec-be76d138158e
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: chat-app:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      uri: git@github.com:dominiksaul/HEIG-VD-cld-chatapp.git
+    sourceSecret:
+      name: github-deploy-key
+    type: Git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: chat-app:latest
+    type: Source
+  successfulBuildsHistoryLimit: 5
+status:
+  lastVersion: 0

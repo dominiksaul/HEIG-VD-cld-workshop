@@ -47,41 +47,33 @@ oc status
 
 # Expose the Service
 oc expose svc/chat-app
-
-
-# Commands to delete created resources in case of an error
-oc delete deployment/chat-app
-oc delete istag/chat-app:latest
-oc delete bc/chat-app
-oc delete svc/chat-app
-
-# Command to get the configurations as yaml files
-#oc get bc/chat-app -o yaml > ./configs/bc-chat-app.yaml
-
-# Command to apply the configuration after the yaml files are updated
-#oc apply -f ./configs/bc-chat-app.yaml
+# Enable TLS
+oc patch route/chat-app -p '{"spec":{"tls":{"termination":"edge"}}}'
 ```
 
 ### Manually with the YAML configuration files
 
 ```bash
 # apply the image stream
-oc apply -f imagestream-chatapp.yaml
+oc apply -f ./configs/imagestream-chatapp.yaml
+oc tag is/chat-app chat-app:latest
 
+# TODO error in this config
+# The ImageStreamTag "chat-app:latest" is invalid: from: Error resolving ImageStreamTag chat-app:latest in namespace dominik-dev: unable to find latest tagged image
 # apply the build config
-oc apply -f buildconfig-chatapp.yaml
+oc apply -f ./configs/buildconfig-chatapp.yaml 
 
 # start the build
 oc start-build chat-app
 
 # apply the deployment
-oc apply -f deployment-chatapp.yaml
+oc apply -f ./configs/deployment-chatapp.yaml
 
 # apply the service
-oc apply -f service-chatapp.yaml
+oc apply -f ./configs/service-chatapp.yaml
 
 # apply the route
-oc apply -f route-chatapp.yaml
+oc apply -f ./configs/route-chatapp.yaml
 ```
 
 ### Check the deployment
@@ -95,4 +87,18 @@ oc get routes
 ```
 
 
-# TODO create ingres rules
+### Optional useful commands
+
+```bash
+# Commands to delete created resources in case of an error
+oc delete istag/chat-app:latest
+oc delete bc/chat-app
+oc delete deployment/chat-app
+oc delete svc/chat-app
+oc delete route/chat-app
+
+# Command to get the configurations as yaml files
+oc get bc/chat-app -o yaml > ./configs/bc-chat-app.yaml
+# Command to apply the configuration after the yaml files are updated
+oc apply -f ./configs/bc-chat-app.yaml
+```

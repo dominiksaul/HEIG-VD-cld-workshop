@@ -1,12 +1,12 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: chatapp-route
+  name: chat-app
 spec:
   to:
     kind: Service
-    name: chatapp-service
+    name: chat-app
   port:
-    targetPort: 80
+    targetPort: 8080
   tls:
     termination: edge

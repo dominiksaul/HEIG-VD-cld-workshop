@@ -20,6 +20,8 @@ spec:
         volumeMounts:
         - mountPath: /opt/jboss/keycloak/standalone/data # todo check this path
           name: keycloak-data
+        env:
+        
       volumes:
       - name: keycloak-data
         persistentVolumeClaim:

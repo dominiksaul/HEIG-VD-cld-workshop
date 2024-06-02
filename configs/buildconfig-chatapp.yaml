@@ -9,12 +9,6 @@ spec:
       uri: git@github.com:dominiksaul/HEIG-VD-cld-chatapp.git
     sourceSecret:
       name: github-deploy-key
-  strategy:
-    type: Source
-    sourceStrategy:
-      from:
-        kind: ImageStreamTag
-        name: nodejs:latest
   output:
     to:
       kind: ImageStreamTag
