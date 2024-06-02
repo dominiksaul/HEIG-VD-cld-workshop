@@ -1,18 +1,24 @@
-# Github Repository Auth config
+# Deploy the NodeJS Chat Application
+
+## Github Repository Auth config
+
 This step needs to be done because the repository of our Chats App is private
 
-## Generate the SSH Key pair
+### Generate the SSH Key pair
+
 ```bash
 # Command used to create the SSH Key pair
 #ssh-keygen -t ed25519 -C "Key to access repo from OpenShift"
 # this command is already done
 ```
 
-## Adding them to Github Repo
+### Adding them to Github Repo
+
 Settings > Deploy keys > Add deploy key
 (> done)
 
-## Create a Secret to authenticate on Github
+### Create a Secret to authenticate on Github
+
 ```bash
 # Create a Secret Using with the Private Key:
 oc create secret generic github-deploy-key --from-file=ssh-privatekey=./keys/githubDeploy --type=kubernetes.io/ssh-auth
@@ -21,7 +27,9 @@ oc create secret generic github-deploy-key --from-file=ssh-privatekey=./keys/git
 oc secrets link builder github-deploy-key --for=pull
 ```
 
-# Deploy the NodeJS Chat Application
+## Deploy the Application
+
+### Automatically with new-app command
 
 ```bash
 # Create a New Application
@@ -53,3 +61,38 @@ oc delete svc/chat-app
 # Command to apply the configuration after the yaml files are updated
 #oc apply -f ./configs/bc-chat-app.yaml
 ```
+
+### Manually with the YAML configuration files
+
+```bash
+# apply the image stream
+oc apply -f imagestream-chatapp.yaml
+
+# apply the build config
+oc apply -f buildconfig-chatapp.yaml
+
+# start the build
+oc start-build chat-app
+
+# apply the deployment
+oc apply -f deployment-chatapp.yaml
+
+# apply the service
+oc apply -f service-chatapp.yaml
+
+# apply the route
+oc apply -f route-chatapp.yaml
+```
+
+### Check the deployment
+
+```bash
+oc status
+oc get builds
+oc get pods
+oc get svc
+oc get routes
+```
+
+
+# TODO create ingres rules

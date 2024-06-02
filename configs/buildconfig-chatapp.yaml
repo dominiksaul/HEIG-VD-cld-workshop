@@ -1,0 +1,21 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: chat-app
+spec:
+  source:
+    type: Git
+    git:
+      uri: git@github.com:dominiksaul/HEIG-VD-cld-chatapp.git
+    sourceSecret:
+      name: github-deploy-key
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: nodejs:latest
+  output:
+    to:
+      kind: ImageStreamTag
+      name: chat-app:latest
