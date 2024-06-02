@@ -101,9 +101,13 @@ The message still exists in the DB and is correctly shown in the app
 ## Cost
 
 <analysis of load-related costs.>
+* AWS Hosting: Costs associated with running the OpenShift cluster on AWS.
+* Persistent Storage: Costs for the storage volumes used by PostgreSQL and Keycloak.
+* Licencing Costs: NodeJS, PostgreSQL and KeyCloak are open source.
 
 <option to reduce or adapt costs (practices, subscription)>
-KeyCloak is opensource so there is only operational costs involved.
+* Use AWS free Tier
+* Use OpenShift locally or in the Sandbox (30 days trial) during developpement
   
 ## Return of experience
 
