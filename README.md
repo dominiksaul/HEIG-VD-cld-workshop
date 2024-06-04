@@ -2,12 +2,11 @@
 
 ## POC objectives
 
-In this workshop we want to collect first experiences with the technology RedHat OpenShift Container Platform (Cluster Hosted on AWS) and demonstrage the deployment and integration of a sample NodeJS chat application.
+In this workshop we want to collect first experiences with the technology RedHat OpenShift Container Platform and demonstrate the deployment and integration of a simple NodeJS chat application.
 The NodeJS application will use a PostgreSQL database in the backend. 
-Additionnaly we will implement a SSO authentication for the application with Keycloak.
+Additionnaly we will implement a SSO authentication for the application with Keycloak. Keycloak as well uses PostgreSQL in the background.
 
 The specific goals are
-* Set up and manage an OpenShift Container Platform Cluster via RedHat on AWS
 * Modify the currently already existing NodeJS Chat Application to use PostgreSQL (instead of currently SQLite)
 * Modify the currently already existing NodeJS Chat Application to use Keycloak for the SSO authentication
 * Host this NodeJS Chat Application that is scalable now on OpenShift
@@ -17,7 +16,7 @@ The specific goals are
 The the result of this workshop will be that we do have a SaaS Chat-App.
 Users, that aren't authenticated, should be redirected to the Keycloak to authenticate themselves, when trying to access the app.
 Only if the users are authenticated they should be able to use the app.
-The NodeJS application can be scaled (manually) and the data (chats in PostgreSQL and accounts in Keycloak) are persistent even after restart.
+The NodeJS application can be scaled (manually) and the data (chats of the Chat-App saved in PostgreSQL and accounts in Keycloak saved in PostgreSQL) are persistent even after restart.
 
 Repository of Chat Application: https://github.com/dominiksaul/HEIG-VD-cld-chatapp
 
@@ -28,9 +27,9 @@ Repository of Chat Application: https://github.com/dominiksaul/HEIG-VD-cld-chata
 ### Todo's
 - [ ] Modify the nodejs chat-app to use a postgreSQL DB
 - [ ] Modify the nodejs chat-app to use the Keycloak authentication
-- [ ] Setup a OpenShift Container Platform Cluster via Redhat (hosted on AWS)
-- [ ] Config for the postgreSQL DB (with a volume for persistent storage)
-- [ ] Config for the Keycloak pos (with a volume for persistent storage)
+- [ ] Config for the PostgreSQL DB for the Chat-App (with a volume for persistent storage)
+- [ ] Config for the Keycloak pod
+- [ ] Config the PostgreSQL DB for Keycloak (with a volume for persistent storage)
 - [ ] Config for NodeJS chat-app
 
 
@@ -41,73 +40,71 @@ Describe step-by-step the scenario. Write it using this format (BDD style).
 ### STEP 01
 ```
 //given -> starting context
-User isn't logged to application and try to access the website
+The NodeJS chat application is deployed on OpenShift.
 //when -> event to produce
-At the start, when user want to access the application
-//then - > expected result
-Redirected to KeyCloak for authentication
+The NodeJS chat application tries to connect to the PostgreSQL database.
+//then -> expected result
+The NodeJS chat application successfully connects to the PostgreSQL database hosted on OpenShift.
 ```
 
 ### STEP 02
 ```
-// given -> starting context
-User is authenticated via Keycloak.
-// when -> event to produce
-User tries to access the application,
-// then -> expected result
-Access is granted to the chat application.
+//given -> starting context
+The Keycloak instance is deployed on OpenShift.
+//when -> event to produce
+The Keycloak instance tries to connect to its PostgreSQL database.
+//then -> expected result
+The Keycloak instance successfully connects to its PostgreSQL database hosted on OpenShift.
 ```
 
 ### STEP 03
 ```
-// given -> starting context
-User is logged into the application and tries to use the chat feature.
-// when -> event to produce
-User sends a message in the chat,
-// then -> expected result
-Message is stored in the PostgreSQL database and displayed to other users.
+//given -> starting context
+The NodeJS chat application and Keycloak are both deployed and configured.
+//when -> event to produce
+A user attempts to access the NodeJS chat application.
+//then -> expected result
+The user is redirected to Keycloak for authentication and, upon successful authentication, is allowed access to the chat application.
 ```
 
 ### STEP 04
 ```
-// given -> starting context
-User is authenticated via Keycloak.
-// when -> event to produce
-User tries to logout in the Application,
-// then -> expected result
-The user is logged out and has to reconnect itself again.
+//given -> starting context
+The NodeJS chat application is running, and users are actively using it.
+//when -> event to produce
+The OpenShift cluster is scaled up to add more instances of the NodeJS chat application.
+//then -> expected result
+New instances of the NodeJS chat application are successfully created, and the application remains fully functional and accessible.
 ```
 
 ### STEP 05
 ```
-// given -> starting context
-User account exists with a specific password.
-// when -> event to produce
-Infrastructure is restarted
-// then -> expected result
-The useraccount still exists with the same password
+//given -> starting context
+The NodeJS chat application is using PostgreSQL for data storage.
+//when -> event to produce
+The OpenShift cluster is restarted.
+//then -> expected result
+All data in PostgreSQL (chat messages and user accounts) remains intact and accessible after the restart.
 ```
 
 ### STEP 06
 ```
-// given -> starting context
-User has send a message to another user which is saved in the DB.
-// when -> event to produce
-Infrastructure is restarted
-// then -> expected result
-The message still exists in the DB and is correctly shown in the app
+//given -> starting context
+Keycloak is configured to use PostgreSQL for storing user accounts.
+//when -> event to produce
+The OpenShift cluster is restarted.
+//then -> expected result
+All user accounts and authentication data in PostgreSQL remain intact and accessible after the restart.
 ```
 
 ## Cost
 
 <analysis of load-related costs.>
-* AWS Hosting: Costs associated with running the OpenShift cluster on AWS.
-* Persistent Storage: Costs for the storage volumes used by PostgreSQL and Keycloak.
+* OpenShift can be used on the RedHat Developer Platform for free for 30 Days.
 * Licencing Costs: NodeJS, PostgreSQL and KeyCloak are open source.
 
 <option to reduce or adapt costs (practices, subscription)>
-* Use AWS free Tier
-* Use OpenShift locally or in the Sandbox (30 days trial) during developpement
+* Use OpenShift locally instead in the Sandbox (30 days trial) during developpement (Not possible on Debian Computers)
   
 ## Return of experience
 
