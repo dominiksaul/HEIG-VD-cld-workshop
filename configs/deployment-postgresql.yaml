@@ -20,15 +20,15 @@ spec:
         env:
         - name: POSTGRES_DB
           value: chat-db
-        - name: POSTGRESQL_DATABASE
-          value: chat-db
-        - name: POSTGRESQL_USER
+        - name: POSTGRES_USER
           value: admin
         - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:
               name: postgres-db-secret
               key: POSTGRES_PASSWORD
+        - name: PGDATA
+          value: /var/lib/postgresql/data/pgdata
         volumeMounts:
         - mountPath: /var/lib/postgresql/data
           name: postgresql-data

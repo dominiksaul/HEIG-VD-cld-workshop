@@ -29,6 +29,8 @@ oc secrets link builder github-deploy-key --for=pull
 
 ## Deploy the Application
 
+For the application we used the automatic command
+
 ### Automatically with new-app command
 
 ```bash

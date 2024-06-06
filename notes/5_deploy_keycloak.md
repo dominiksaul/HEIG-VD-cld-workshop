@@ -1,5 +1,19 @@
 # Deploy Keycloak
 
+## Deploy PostgreSQL for Keycloak
+
+## Automatically with the new-app command
+
+```bash
+# deploy postgresql automatically with the new-app command
+oc new-app postgresql-persistent \
+  -e POSTGRESQL_USER=keycloakadmin \
+  -e POSTGRESQL_PASSWORD=HbqQS!#YUbt4M!NB2eVC \
+  -e POSTGRESQL_DATABASE=keycloak-db \
+  --name=keycloak-db
+```
+
+
 ## Automatically with the new-app command
 
 ```bash
