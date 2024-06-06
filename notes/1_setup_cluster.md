@@ -1,4 +1,5 @@
 # Set up Cluster
+Discontinued since sandbox solution is sufficient for testing infrastructure.
 
 ## Install ROSA 
 * Download the binary from the OpenShift Platform
@@ -18,3 +19,4 @@ To be able to use OpenShift on AWS we have to ask quotas increases beyond their 
 - ebs service - Storage for General Purpose SSD (gp3) volumes, in TiB - from 50 to 300 (in-progress)
 - ebs service - Storage for General Purpose SSD (gp2) volumes, in TiB - from 50 to 300
 - ebs service - Storage for Provisioned IOPS SSD (io1) volumes, in TiB - from 50 to 300
+
