@@ -4,7 +4,7 @@
 
 ```bash
 # create secret
-oc create secret generic keycloak-db-secret --from-literal=POSTGRES_PASSWORD=HbqQS!.YUbt4M!NB2eVC
+oc create secret generic keycloak-db-secret --from-literal=POSTGRES_PASSWORD=HbqQS-.YUbt4MnNB2eVC
 
 # apply pvc
 oc apply -f ./configs/pvc-keycloak-db.yaml
