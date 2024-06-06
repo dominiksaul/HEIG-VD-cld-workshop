@@ -54,6 +54,7 @@ oc patch route/chat-app -p '{"spec":{"tls":{"termination":"edge"}}}'
 ### Manually with the YAML configuration files
 
 ! We did use the command new-app to create the application !
+
 ```bash
 # apply the image stream
 oc apply -f ./configs/imagestream-chatapp.yaml
@@ -86,7 +87,6 @@ oc get pods
 oc get svc
 oc get routes
 ```
-
 
 ### Optional useful commands
 
