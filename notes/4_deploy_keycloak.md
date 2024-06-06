@@ -13,9 +13,6 @@ oc expose svc/keycloak
 ## Manually with the YAML configuration files
 
 ```bash
-# apply pvc
-oc apply -f ./configs/pvc-keycloak.yaml
-
 # apply deployment
 oc apply -f ./configs/deployment-keycloak.yaml
 

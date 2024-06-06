@@ -38,6 +38,9 @@ oc new-app nodejs~git@github.com:dominiksaul/HEIG-VD-cld-chatapp.git --name=chat
 # The build of the pod will fail, the secret needs to be still added
 # command to specify the source secret
 oc patch bc/chat-app -p '{"spec":{"source":{"sourceSecret":{"name":"github-deploy-key"}}}}'
+
+# TODO patch variables to use the postgresql and keycloak
+
 # command to trigger a new build
 oc start-build chat-app
 
