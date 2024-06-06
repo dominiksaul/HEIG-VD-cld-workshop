@@ -29,8 +29,6 @@ oc secrets link builder github-deploy-key --for=pull
 
 ## Deploy the Application
 
-For the application we used the automatic command
-
 ### Automatically with new-app command
 
 ```bash
@@ -55,6 +53,7 @@ oc patch route/chat-app -p '{"spec":{"tls":{"termination":"edge"}}}'
 
 ### Manually with the YAML configuration files
 
+! We did use the command new-app to create the application !
 ```bash
 # apply the image stream
 oc apply -f ./configs/imagestream-chatapp.yaml
