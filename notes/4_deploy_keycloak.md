@@ -45,3 +45,15 @@ oc delete deployment/keycloak
 oc delete svc/keycloak
 oc delete route/keycloak
 ```
+
+## Configure Keycloak Realm and Client
+
+### Create Realm
+
+* chatapp
+
+### Create Client
+
+* Type: OpenID Connect
+* Client ID: chatapp
+* Configure URLs: https://chat-app-dominik-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/

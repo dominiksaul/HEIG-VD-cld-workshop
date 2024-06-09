@@ -12,4 +12,4 @@ data:
   KEYCLOAK_URL: https://keycloak-dominik-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/auth
   KEYCLOAK_REALM: chatapp
   KEYCLOAK_CLIENT_ID: chatapp
-  KEYCLOAK_REALM_PUBLIC_KEY: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzj6
+  KEYCLOAK_REALM_PUBLIC_KEY: LjpWrhgZuzCjFIoigL1GEMKnYQXDlOgI
