@@ -7,6 +7,7 @@ spec:
     kind: Service
     name: keycloak
   port:
-    targetPort: 8443
+    targetPort: 8080
   tls:
-    termination: reencrypt
+    termination: edge
+    insecureEdgeTerminationPolicy: Allow
