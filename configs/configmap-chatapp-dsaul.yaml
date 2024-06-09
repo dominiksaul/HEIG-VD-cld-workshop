@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: chatapp-config
+data:
+  NODE_ENV: production
+  DATABASE_URL: postgres://chatdbuser:ov.vLek84%j@n28DeoC9Ri@postgresql:5432/chat-db
+  KEYCLOAK_URL: https://keycloak-dominik-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/auth

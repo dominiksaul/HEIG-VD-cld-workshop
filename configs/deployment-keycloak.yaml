@@ -15,23 +15,12 @@ spec:
       containers:
       - name: keycloak
         image: quay.io/keycloak/keycloak:latest
+        args: 
+        - "start-dev"
+        - "--hostname-strict=false"
+        - "--hostname-strict-https=false"
         ports:
         - containerPort: 8080
-        env:
-        - name: DB_VENDOR
-          value: postgres
-        - name: DB_ADDR
-          value: keycloak-postgresql
-        - name: DB_DATABASE
-          value: keycloak
-        - name: DB_USER
-          value: keycloak
-        - name: DB_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: postgres-db-secret
-              key: POSTGRES_PASSWORD
-        - name: KEYCLOAK_USER
-          value: admin
-        - name: KEYCLOAK_PASSWORD
-          value: admin
+        envFrom:
+            - configMapRef:
+                name: keycloak-config

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgresql-config
+data:
+  POSTGRES_DB: chat-db
+  POSTGRES_USER: chatdbuser
+  POSTGRES_PASSWORD: ov.vLek84%j@n28DeoC9Ri
+  PGDATA: /var/lib/postgresql/data/pgdata

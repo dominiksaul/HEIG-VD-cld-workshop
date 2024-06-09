@@ -17,18 +17,9 @@ spec:
         image: postgres:latest
         ports:
         - containerPort: 5432
-        env:
-        - name: POSTGRES_DB
-          value: keycloak-db
-        - name: POSTGRES_USER
-          value: admin
-        - name: POSTGRES_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: keycloak-db-secret
-              key: POSTGRES_PASSWORD
-        - name: PGDATA
-          value: /var/lib/postgresql/data/pgdata
+        envFrom:
+        - configMapRef:
+            name: keycloak-db-config
         volumeMounts:
         - mountPath: /var/lib/postgresql/data
           name: keycloak-db-data

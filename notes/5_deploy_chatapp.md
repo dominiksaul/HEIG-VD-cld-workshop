@@ -39,7 +39,11 @@ oc new-app nodejs~git@github.com:dominiksaul/HEIG-VD-cld-chatapp.git --name=chat
 # command to specify the source secret
 oc patch bc/chat-app -p '{"spec":{"source":{"sourceSecret":{"name":"github-deploy-key"}}}}'
 
-# TODO patch variables to use the postgresql and keycloak
+# apply config map
+oc apply -f ./configs/configmap-chatapp.yaml
+# specify config map
+oc set env --from=configmap/chatapp-config deployment/chat-app
+
 
 # command to trigger a new build
 oc start-build chat-app
@@ -95,6 +99,7 @@ oc get routes
 
 ```bash
 # Commands to delete created resources in case of an error
+oc delete configmap/chatapp-config
 oc delete istag/chat-app:latest
 oc delete bc/chat-app
 oc delete deployment/chat-app

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: keycloak-config
+data:
+  KEYCLOAK_ADMIN: admin
+  KEYCLOAK_ADMIN_PASSWORD: i!Fzd!Eu#sARLX4XNaA9r25G
+  DB_VENDOR: postgres
+  DB_ADDR: keycloak-db
+  DB_DATABASE: keycloak-db
+  DB_USER: keycloakdbuser
+  DB_PASSWORD: HbqQS-.YUbt4MnNB2eVC
