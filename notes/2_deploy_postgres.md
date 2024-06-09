@@ -30,7 +30,7 @@ oc get svc
 ```bash
 # Commands to delete created resources in case of an error
 oc delete configmap/postgresql-config
-oc delete pvc/postgres
-oc delete deployment/postgres
-oc delete svc/postgres
+oc delete pvc/postgresql
+oc delete deployment/postgresql
+oc delete svc/postgresql
 ```

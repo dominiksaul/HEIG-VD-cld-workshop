@@ -1,5 +1,15 @@
 # Deploy Keycloak
 
+## Configure TLS Certificate
+
+```bash
+# create certificate
+openssl req -x509 -nodes -newkey rsa:4096 -keyout keys/key.pem -out keys/cert.pem -days 365
+
+# add certificate to openshift
+oc create secret tls keycloak-tls-secret --cert=keys/cert.pem --key=keys/key.pem
+```
+
 ## Manually with the YAML configuration files
 
 ```bash
@@ -25,9 +35,6 @@ oc get pods
 oc get svc
 og get routes
 ```
-
-Content-Security-Policy: The page’s settings blocked the loading of a resource (frame-src) at 
-because it violates the following directive: “frame-src 'self'”
 
 ### Optional useful commands
 

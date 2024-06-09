@@ -20,7 +20,15 @@ spec:
         - "--hostname-strict=false"
         - "--hostname-strict-https=false"
         ports:
-        - containerPort: 8080
+        - containerPort: 8443
         envFrom:
             - configMapRef:
                 name: keycloak-config
+        volumeMounts:
+        - name: tls-secret
+          mountPath: /etc/ssl/certs
+          readOnly: true
+      volumes:
+      - name: tls-secret
+        secret:
+          secretName: keycloak-tls-secret

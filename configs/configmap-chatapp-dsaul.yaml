@@ -4,5 +4,12 @@ metadata:
   name: chatapp-config
 data:
   NODE_ENV: production
-  DATABASE_URL: postgres://chatdbuser:ov.vLek84%j@n28DeoC9Ri@postgresql:5432/chat-db
+  DATABASE_NAME: chat-db
+  DATABASE_USERNAME: chatdbuser
+  DATABASE_PASSWORD: ovvLek84jn28DeoC9Ri
+  DATABASE_HOST: postgresql
+  DATABASE_PORT: '5432'
   KEYCLOAK_URL: https://keycloak-dominik-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/auth
+  KEYCLOAK_REALM: chatapp
+  KEYCLOAK_CLIENT_ID: chatapp
+  KEYCLOAK_REALM_PUBLIC_KEY: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzj6

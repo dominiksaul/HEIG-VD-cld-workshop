@@ -5,6 +5,8 @@ metadata:
 data:
   KEYCLOAK_ADMIN: admin
   KEYCLOAK_ADMIN_PASSWORD: i!Fzd!Eu#sARLX4XNaA9r25G
+  KEYCLOAK_HTTPS_PORT: '8443'
+  KEYCLOAK_HTTPS: 'true'
   DB_VENDOR: postgres
   DB_ADDR: keycloak-db
   DB_DATABASE: keycloak-db
