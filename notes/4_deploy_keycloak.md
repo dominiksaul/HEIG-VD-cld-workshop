@@ -24,6 +24,7 @@ oc apply -f ./configs/service-keycloak.yaml
 
 # apply route
 oc apply -f ./configs/route-keycloak.yaml
+ 
 ```
 
 ## Check the deployment
@@ -51,9 +52,16 @@ oc delete route/keycloak
 ### Create Realm
 
 * chatapp
+* Create Realm Role: admin
+* Go to <keycloak URL>/realms/chatapp/.well-known/openid-configuration to retrieve the issuer URL to connect our app to Keycloack
 
 ### Create Client
 
 * Type: OpenID Connect
 * Client ID: chatapp
-* Configure URLs: https://chat-app-dominik-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/
+* Valid redirect URLs: https://chat-app-algorhythmn-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/*
+* Leave all others options by default and save
+
+### Create new user (for PoC)
+* User1: username: donald.trump password:1234
+* User2: username: elon.musk password:1234 

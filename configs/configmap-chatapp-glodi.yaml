@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: chatapp-confit stg
+data:
+  NODE_ENV: production
+  APP_DOMAIN: chat-app-algorhythmn-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com
+  DATABASE_NAME: chat-db
+  DATABASE_USERNAME: chatdbuser
+  DATABASE_PASSWORD: ovvLek84jn28DeoC9Ri
+  DATABASE_HOST: postgresql
+  DATABASE_PORT: '5432'
+  KEYCLOAK_URL: https://keycloak-algorhythmn-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com
+  KEYCLOAK_REALM: chatapp
+  KEYCLOAK_CLIENT_ID: chatapp
+  KEYCLOAK_ISSUER: https://keycloak-algorhythmn-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/realms/chatapp"
+  KEYCLOAK_REALM_PUBLIC_KEY: LjpWrhgZuzCjFIoigL1GEMKnYQXDlOgI
+
+
