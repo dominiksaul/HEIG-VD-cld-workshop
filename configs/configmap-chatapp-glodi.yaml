@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: chatapp-confit stg
+  name: chatapp-config
 data:
   NODE_ENV: production
   APP_DOMAIN: chat-app-algorhythmn-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com
@@ -13,7 +13,7 @@ data:
   KEYCLOAK_URL: https://keycloak-algorhythmn-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com
   KEYCLOAK_REALM: chatapp
   KEYCLOAK_CLIENT_ID: chatapp
-  KEYCLOAK_ISSUER: https://keycloak-algorhythmn-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/realms/chatapp"
+  KEYCLOAK_ISSUER: https://keycloak-algorhythmn-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/realms/chatapp
   KEYCLOAK_REALM_PUBLIC_KEY: LjpWrhgZuzCjFIoigL1GEMKnYQXDlOgI
 
 

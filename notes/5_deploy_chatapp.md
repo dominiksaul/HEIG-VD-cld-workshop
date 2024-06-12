@@ -40,7 +40,8 @@ oc new-app nodejs~git@github.com:dominiksaul/HEIG-VD-cld-chatapp.git --name=chat
 oc patch bc/chat-app -p '{"spec":{"source":{"sourceSecret":{"name":"github-deploy-key"}}}}'
 
 # apply config map
-oc apply -f ./configs/configmap-chatapp-dsaul.yaml
+#oc apply -f ./configs/configmap-chatapp-dsaul.yaml
+oc apply -f ./configs/configmap-chatapp-glodi.yaml
 # specify config map
 oc set env --from=configmap/chatapp-config deployment/chat-app
 
