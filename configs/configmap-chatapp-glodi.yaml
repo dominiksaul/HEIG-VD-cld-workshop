@@ -4,7 +4,7 @@ metadata:
   name: chatapp-config
 data:
   NODE_ENV: production
-  APP_DOMAIN: chat-app-algorhythmn-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com
+  APP_DOMAIN: https://chat-app-algorhythmn-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com
   DATABASE_NAME: chat-db
   DATABASE_USERNAME: chatdbuser
   DATABASE_PASSWORD: ovvLek84jn28DeoC9Ri
